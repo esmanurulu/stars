@@ -13,6 +13,7 @@ W = (255, 255, 255)
 
 star_img = pygame.image.load("star.png")
 star_img = pygame.transform.scale(star_img, (30, 30)) 
+starss = [Stars() for _ in range(15)]
 
 class Stars:
     def __init__(self):
@@ -32,14 +33,14 @@ class Stars:
 
 
 
-starss = [Stars() for _ in range(15)]
 
 
-run = True
 clock = pygame.time.Clock()
+run = True
+
 while run:
     screen.fill(W)
-
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
